@@ -1,0 +1,19 @@
+
+detectors:
+
+  tinaface_r50_fpn_gn_dcn:
+    dir: vedadet
+    args: "--thresh 0.2 --config configs/infer/tinaface/tinaface_r50_fpn_gn_dcn.py"
+
+  scrfd_10g_bnkps:
+    dir: scrfd
+    args: "--thresh 0.2 --model weights/scrfd_10g_bnkps.onnx"
+
+  retinaface_resnet50:
+    dir: Pytorch_Retinaface
+    args: "--confidence_threshold 0.2 --trained_model Resnet50_Final.pth --network resnet50"
+
+
+thresh_iou: [0.8, 0.5]
+min_votes: [2, 1]
+
